@@ -1,0 +1,7 @@
+C:\Work\Generics\Counting\Counting\bin\Debug\Counting.exe.config
+C:\Work\Generics\Counting\Counting\bin\Debug\Counting.exe
+C:\Work\Generics\Counting\Counting\bin\Debug\Counting.pdb
+C:\Work\Generics\Counting\Counting\obj\Debug\Generics.csprojResolveAssemblyReference.cache
+C:\Work\Generics\Counting\Counting\obj\Debug\Generics.csproj.CoreCompileInputs.cache
+C:\Work\Generics\Counting\Counting\obj\Debug\Counting.exe
+C:\Work\Generics\Counting\Counting\obj\Debug\Counting.pdb
