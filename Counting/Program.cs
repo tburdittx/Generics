@@ -3,24 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static Generics.Apples;
-
 
 namespace Generics
 {
-
     class Program
-    {
-        public static int Count = 0;      
-        public static int AllApples = 0;
-
+    {  
         static  List<Apples> BoxOfApple = new List<Apples>();
-
+        static List<Apples> MoreApples = new List<Apples>();
+        static List<Cart<Box<Apples>>> HowManyBoxes = new List<Cart<Box<Apples>>>();
         static void Main(string[] args)
         {
-
-            Cart cart = new Cart();
-            Counter<Apples> counter = new Counter<Apples>();
+            Apples apples = new Apples();
+           Cart<Apples> cart = new Cart<Apples>();
+           Counter<Apples> counters = new Counter<Apples>();
+            Counter<Apples> moreCounting = new Counter<Apples>();
 
             BoxOfApple.Add(new Apples() { colour = Colour.Green });
             BoxOfApple.Add(new Apples() { colour = Colour.Green });
@@ -33,18 +29,25 @@ namespace Generics
             BoxOfApple.Add(new Apples() { colour = Colour.Red });
 
             Box<Apples> box = new Box<Apples>();
-            box.Add(BoxOfApple);           
+            box.Add(BoxOfApple);
 
-            foreach (Apples apple in BoxOfApple)
-            {
-                Counter<Apples> counters = new Counter<Apples>();
-                counters.CountAllApples();
-            }
+            BoxOfApple.ForEach(counters.Add);
 
-            Console.WriteLine("Number of Apples: {0}", AllApples);
+            MoreApples.Add(new Apples() { colour = Colour.Red });
+            MoreApples.Add(new Apples() { colour = Colour.Red });
+            MoreApples.Add(new Apples() { colour = Colour.Red });
+            MoreApples.Add(new Apples() { colour = Colour.Red });
+
+            MoreApples.ForEach(moreCounting.Add);
+
+            cart.Add(BoxOfApple);
+            cart.Add(MoreApples);
+
+            Console.WriteLine("Number of Apples in the Box 1: {0}", counters.Count());
+            Console.WriteLine($"Number of Apples in Box 2: {moreCounting.Count()}");
+            Console.WriteLine($"Number of Apples in the cart: {cart.Count()} ");
 
             Console.ReadLine();
         }
-       
     }  
 }

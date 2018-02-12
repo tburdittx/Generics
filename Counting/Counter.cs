@@ -8,22 +8,14 @@ namespace Generics
 {
     public class Counter<t>
     {
-        
-
-        int AllApples = 0;
-        int CountRed = 0;
-
-        public int CountAllApples()
+        int count = 0;
+        public void Add(t item)
         {
-            AllApples++;
-            return AllApples;
+           count++;
         }
-
-        public int CountRedOnly()
+        public int Count()
         {
-          
-            CountRed++;
-            return CountRed;
+            return count;
         }
     }
 }

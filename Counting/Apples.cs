@@ -6,16 +6,10 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    public class Apples : ICountable, IApples
+    public class Apples : ICountable
     {
         public Colour colour;
     }
-
-    public interface IApples
-    {
-      
-    }
-
     public enum Colour
     {
         Red,
