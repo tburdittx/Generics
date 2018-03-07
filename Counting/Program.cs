@@ -33,10 +33,10 @@ namespace Generics
 
             BoxOfApple.ForEach(counters.Add);
 
-            MoreApples.Add(new Apples() { colour = Colour.Red });
-            MoreApples.Add(new Apples() { colour = Colour.Red });
-            MoreApples.Add(new Apples() { colour = Colour.Red });
-            MoreApples.Add(new Apples() { colour = Colour.Red });
+            MoreApples.Add(new Apples() { colour = Colour.Green });
+            MoreApples.Add(new Apples() { colour = Colour.Yellow });
+            MoreApples.Add(new Apples() { colour = Colour.Yellow });
+            MoreApples.Add(new Apples() { colour = Colour.Yellow });
 
             MoreApples.ForEach(moreCounting.Add);
 

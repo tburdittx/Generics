@@ -2,5 +2,6 @@
 {
     public interface ICountable
     {
+        int Count();
     }
 }

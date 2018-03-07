@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    public class Counter<t>
+    public class Counter<t>:ICountable
     {
         int count = 0;
         public void Add(t item)
